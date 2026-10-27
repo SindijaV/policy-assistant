@@ -17,7 +17,7 @@ Keep your real API key in `.env`, excluded from Git. `.env.example` contains pla
 - `app.py`: starts the website and contains the shared AI connection, settings, prompt, validation and both LLM context choices.
 - `vector_search.py`: embedding and retrieval functions.
 - `build_index.py`: creates or reuses the saved vector index.
-- `requirements.txt`: records that no external Python packages are required.
+- `requirements.txt`: lists the Slack bot dependency; the website itself uses the Python standard library.
 - `.env.example`: placeholder configuration; your actual key stays private in `.env`.
 
 ## Index and testing
@@ -37,3 +37,9 @@ Start command: `python3 app.py --host 0.0.0.0`. The hosting service supplies POR
 The host supplies HTTPS; same-host HTTPS requests are accepted. If its proxy changes the Host header, set PUBLIC_ORIGIN to your exact public origin (such as https://your-app.example.com, without a path).
 
 Public testing is pending deployment: run Compare all three and each individual method; check answers, sources, time and tokens, and try a missing-detail question.
+
+## Local Slack bot
+
+Configure the app with Socket Mode, app_mentions:read and chat:write bot scopes, and the app_mention bot event. Install it in your workspace and invite it to your testing channel. Save SLACK_APP_TOKEN (xapp-, connections:write) and SLACK_BOT_TOKEN (xoxb-) in your private .env, alongside the OpenAI settings.
+
+Run `python3 -m pip install -r requirements.txt`, then `python3 slack_bot.py`. Keep the computer awake and this process running. Mention @Policy Assistant with a question in the channel. The bot uses the existing saved vector index and shared OpenAI answer function, returning answers and original supporting policy text. No website server process is needed for the local bot. Stop with Control+C. Slack credentials are not needed on Render when the bot runs locally.
