@@ -1,0 +1,6 @@
+﻿Phase,Method,Questions,Correct,Correct citations / 294,Unsupported factual claims,Missing details handled / 98,Unrelated handled / 6,Average response ms,Average LLM tokens,Average question embedding tokens
+Initial,Rules-based search,300,141,156,0,0,6,0.681,0,0
+Initial,LLM without a vector index,300,298,294,1,98,6,1428.694,3729.39,0
+Initial,LLM with a vector index,300,300,294,0,98,6,1694.456,361.51,11.44
+Retest,Rules-based search,300,239,233,0,98,6,0.669,0,0
+Current rules retest,Rules-based search,300,240,234,0,98,6,0.676,0,0

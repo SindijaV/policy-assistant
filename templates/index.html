@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Company Policy Assistant</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,sans-serif;color:#20332f;background:#f5f6f2}*{box-sizing:border-box}body{margin:0}main{max-width:900px;margin:70px auto;padding:0 24px}header{border-bottom:1px solid #cdd8d0;padding-bottom:28px;margin-bottom:32px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#527568}h1{font-size:clamp(30px,5vw,46px);letter-spacing:-1.5px;margin:12px 0}p{line-height:1.6}.muted{color:#60716b}label{display:block;font-weight:600;margin-bottom:10px}.search{display:flex;gap:10px}input{flex:1;min-width:0;padding:16px;font:inherit;border:1px solid #9aafa5;border-radius:6px}button{background:#245b47;color:white;border:0;border-radius:6px;padding:15px 24px;font:inherit;cursor:pointer}button:disabled{opacity:.5}input:focus-visible,button:focus-visible{outline:3px solid #96b8a5;outline-offset:3px}.examples{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.examples button{background:transparent;color:#245b47;border:1px solid #c5d3ca;padding:8px 12px;font-size:13px}.status{margin:24px 0;color:#526b5e;font-size:14px}article{background:#fff;padding:24px 28px;margin:16px 0;border-left:3px solid #46765d}h2{font-size:22px;margin:0 0 10px}.meta{font-size:13px;color:#62766b}.policy{font-size:18px;line-height:1.6}footer{margin-top:40px;border-top:1px solid #cdd8d0;padding-top:18px;font-size:13px;color:#60716b}@media(max-width:550px){main{margin:32px auto}.search{flex-direction:column}article{padding:20px}}
+  mark{background:#fff0a6;color:inherit;padding:0 1px}.condition{font-weight:700}.explanation,.condition-note,.legend{font-size:13px}.condition-note{color:#305e45}.choices{display:flex;flex-wrap:wrap;gap:10px}.notice{padding:14px;border-left:3px solid #b58836;background:#fff5da}.testing{border-top:1px solid #cdd8d0;margin-top:40px;padding-top:28px}.testing summary{font-size:22px;font-weight:600;cursor:pointer;margin-bottom:18px}.table-scroll{overflow:auto;margin-top:20px}table{border-collapse:collapse;width:100%;min-width:1100px;font-size:13px}th,td{text-align:left;padding:14px;vertical-align:top;border-bottom:1px solid #d5ded7}th{background:#e8eee8}td p{margin:8px 0}select{width:100%;padding:8px;font:inherit}td:first-child{min-width:250px}.table-scroll:focus{outline:2px solid #527568}
+main{max-width:1440px;margin:48px auto;padding:0 40px}
+header{margin-bottom:0;padding-bottom:28px}header p{max-width:650px}
+.workspace{display:grid;grid-template-columns:minmax(280px,0.85fr) minmax(0,1.4fr);gap:48px;min-height:420px;padding:36px 0}
+.search-side{padding-right:36px;border-right:1px solid #cdd8d0;min-width:0}
+.search{flex-direction:column}.search input{width:100%}.search button{align-self:flex-start}
+.examples{flex-direction:column;align-items:flex-start;margin-top:24px}.examples button{text-align:left;line-height:1.5}
+.results-side{min-width:0}.results-heading{font-size:22px;margin:0}.status{margin:12px 0 22px}.empty-state{padding:48px 28px;border:1px dashed #bdcbc0;color:#60716b;margin-top:24px}.empty-state h3{font-size:20px;font-weight:500;margin:0}.empty-state p{margin-bottom:0}
+article{margin:0 0 20px}.testing{margin-top:8px;padding-bottom:32px}
+@media(max-width:650px){main{padding:0 22px;margin:28px auto}.workspace{grid-template-columns:1fr;gap:28px;padding:28px 0}.search-side{padding-right:0;border-right:0;border-bottom:1px solid #cdd8d0;padding-bottom:28px}.empty-state{padding:28px 22px}}
+
+/* Refined desktop proportions and compact vertical spacing. */
+main{max-width:1240px;margin:32px auto;padding:0 36px}
+header{padding-bottom:20px}header h1{font-size:clamp(30px,3.3vw,42px);margin:10px 0 12px}header p{margin:0;max-width:680px}
+.workspace{grid-template-columns:minmax(0,35fr) minmax(0,65fr);gap:36px;padding:28px 0;min-height:360px}
+.search-side{padding-right:28px}.search input{font-size:15px;padding:14px}.search button{padding:13px 20px}
+.examples-label{font-size:13px;font-weight:600;color:#60716b;margin:26px 0 10px}.examples{margin-top:0;gap:8px}.examples button{font-size:13px;padding:9px 12px;width:100%}
+.results-heading{font-size:21px}.status{font-size:13px;margin:10px 0 18px}
+article{padding:24px 26px;margin:0 0 18px;border:1px solid #e0e7df;border-left:3px solid #46765d;border-radius:4px}article h2{font-size:21px;line-height:1.3}article .policy{font-size:17px;margin:18px 0}.explanation{color:#60716b;line-height:1.6}.condition-note{margin-bottom:0}
+.testing{margin-top:0;padding-top:18px;padding-bottom:24px}.testing summary{font-size:15px;font-weight:500;color:#60716b;margin-bottom:0}.testing[open] summary{margin-bottom:16px}.testing>p{font-size:14px;max-width:none;width:100%}.testing>button{font-size:14px;padding:11px 16px}
+@media(max-width:650px){main{padding:0 20px;margin:24px auto}header{padding-bottom:22px}.workspace{grid-template-columns:1fr;gap:24px;padding:24px 0;min-height:0}.search-side{padding-right:0}.examples{align-items:stretch}.examples button{width:auto}article{padding:20px}.testing{margin-top:0}}
+#method{margin-bottom:4px;background:white;border:1px solid #9aafa5;border-radius:6px;padding:12px;font-size:14px}#connection{font-size:13px;margin:8px 0 22px}.ai-answer{white-space:pre-wrap}.source-label{font-size:13px;color:#60716b}.ai-note{font-size:13px;color:#60716b}
+.answer-sources{margin:26px 0 20px;border-top:1px solid #cdd8d0;padding-top:18px}
+.sources-heading{font-size:13px;font-weight:600;color:#60716b;letter-spacing:.04em;margin:0 0 16px}
+.source-citation{padding:0 0 0 18px;border-left:2px solid #a6bdb0;margin:0 0 22px}
+.source-citation h4{font-size:17px;font-weight:600;margin:0 0 6px}
+.source-citation blockquote{font-size:15px;line-height:1.7;margin:12px 0;color:#40574e}
+.source-citation blockquote:before{content:'“'}.source-citation blockquote:after{content:'”'}
+.source-origin{font-size:12px;color:#60716b;margin:8px 0 0}
+
+#results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.method-result{min-width:0;border-top:3px solid #46765d;padding:16px 0}.method-result>h3{font-size:18px;line-height:1.4;margin:0 0 12px}.method-status{font-size:12px;color:#60716b;line-height:1.7}.method-result article{padding:18px 16px}.method-result article h2{font-size:18px}.method-result .policy,.method-result .ai-answer{font-size:15px}.method-result .source-citation{padding-left:12px}.method-result .source-citation h4{font-size:15px}
+main{max-width:1720px}.workspace{grid-template-columns:minmax(240px,0.75fr) minmax(0,3fr);gap:28px}.search-side{padding-right:22px}
+@media(max-width:1150px){#results{grid-template-columns:1fr}.workspace{grid-template-columns:minmax(240px,1fr) minmax(0,2fr)}}
+@media(max-width:650px){.workspace{grid-template-columns:1fr}}
+#run-mode{background:white;border:1px solid #9aafa5;border-radius:6px;font-size:14px;padding:12px;margin-bottom:4px}#results.single-method{grid-template-columns:minmax(0,1fr)}
+/* Spacious starting view, full-width comparison after submission. */
+main{max-width:1560px;padding:0 40px}
+body:not(.has-results) .workspace{grid-template-columns:minmax(340px,1fr) minmax(0,1fr);gap:64px;padding:40px 0;min-height:440px}
+body:not(.has-results) .search-side{padding-right:48px}
+body:not(.has-results) #results{display:block}
+body:not(.has-results) .empty-state{width:100%;padding:48px 32px}
+body:not(.has-results) .search input{font-size:16px;padding:16px}
+body:not(.has-results) .examples{align-items:stretch}
+body.has-results .workspace{display:block;padding-top:26px}
+body.has-results .search-side{border-right:0;border-bottom:1px solid #cdd8d0;padding:0 0 24px;margin-bottom:30px}
+body.has-results #search-form{display:grid;grid-template-columns:minmax(220px,0.8fr) minmax(0,2fr);column-gap:28px;align-items:start}
+body.has-results label[for="run-mode"]{grid-column:1;grid-row:1}
+body.has-results #run-mode{grid-column:1;grid-row:2;height:52px}
+body.has-results #connection{grid-column:1;grid-row:3;margin:8px 0 0}
+body.has-results label[for="question"]{grid-column:2;grid-row:1}
+body.has-results .search{grid-column:2;grid-row:2;display:flex;flex-direction:row;align-items:stretch}
+body.has-results .search input{width:auto;min-width:0;padding:14px;font-size:16px}
+body.has-results .search button{align-self:stretch;white-space:normal;max-width:220px}
+body.has-results .examples-label{margin:18px 0 8px}
+body.has-results .examples{flex-direction:row;gap:8px;flex-wrap:wrap}
+body.has-results .examples button{width:auto;font-size:12px}
+body.has-results #results{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+body.has-results #results.single-method{grid-template-columns:minmax(0,1fr);max-width:900px}
+.method-result{padding-top:20px}.method-result>h3{font-size:20px;min-height:56px}
+.method-status{font-size:13px;line-height:1.75;min-height:78px;margin:0 0 20px;overflow-wrap:anywhere}
+.method-result article{padding:22px}.method-result article h2{font-size:19px}.method-result .policy,.method-result .ai-answer{font-size:16px;line-height:1.75}
+.source-citation blockquote{font-size:15px;line-height:1.8}.ai-note{line-height:1.7;overflow-wrap:anywhere}
+@media(max-width:1050px){main{padding:0 28px}body.has-results #results{grid-template-columns:repeat(3,minmax(285px,1fr));overflow-x:auto;padding-bottom:18px;gap:24px}body.has-results #results.single-method{grid-template-columns:minmax(0,1fr)}body:not(.has-results) .workspace{gap:32px;grid-template-columns:minmax(280px,1fr) minmax(0,1fr)}body:not(.has-results) .search-side{padding-right:24px}}
+@media(max-width:650px){main{padding:0 20px}body:not(.has-results) .workspace{grid-template-columns:1fr;gap:24px;padding:26px 0;min-height:0}body:not(.has-results) .search-side{padding-right:0}body.has-results #search-form{display:block}body.has-results .search{flex-direction:column}body.has-results .search input{width:100%}body.has-results .search button{max-width:none}body.has-results #connection{margin-bottom:20px}.method-result>h3{font-size:18px}}
+
+/* Keep the top search layout stable; center the answer block. */
+body.has-results .results-side{width:100%;margin-inline:auto}
+body.has-results #results.single-method{width:100%;max-width:960px;margin-inline:auto}
+body.has-results #results:has(.empty-state){display:block;width:100%;max-width:960px;margin-inline:auto;overflow:visible}
+body.has-results .empty-state{margin-top:24px;text-align:center;padding:40px 28px}
+body.has-results #results.single-method .method-result>h3{min-height:0;margin-bottom:14px}
+body.has-results #results.single-method .method-status{min-height:0;margin-bottom:22px}
+body.has-results #results.single-method{margin-inline:0 auto;text-align:left}body.has-results #results.single-method{max-width:none;width:100%;margin-inline:0}header p{max-width:none}body.has-results #results:has(.empty-state){max-width:none;width:100%;margin-inline:0}body.has-results .empty-state{width:100%;margin-inline:0}.banner-title{display:flex;align-items:center;gap:18px;margin:10px 0 12px}.policy-symbol{width:48px;height:48px;flex:none;color:#245b47}.banner-title h1{margin:0}@media(max-width:650px){.banner-title{gap:12px}.policy-symbol{width:38px;height:38px}}
+.testing{border-top:0;margin-top:16px;padding-top:0;padding-bottom:0}
+.testing>summary{background:#245b47;color:#fff;padding:17px 20px;border-radius:6px;font-size:15px;font-weight:600;margin:0;line-height:1.5}
+.testing>summary:hover{background:#1d4c3b}
+.testing>summary:focus-visible{outline:3px solid #96b8a5;outline-offset:3px}
+.testing[open]>summary{margin-bottom:20px}
+.testing[open]{padding-bottom:22px}
+.testing:last-of-type{margin-bottom:32px}
+
+/* Shared evidence and information styling across all methods. */
+mark{background:#e1eee5;color:#244e3b;border-radius:3px;padding:1px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.notice{background:#edf4ef;border-left:3px solid #668f78;color:#294c3b;padding:14px 16px;border-radius:0 4px 4px 0;font-size:14px;line-height:1.7}
+.source-citation{border-left-color:#9ab7a5}.source-citation blockquote{color:#40574e}
+.method-result details{margin:14px 0;border:1px solid #d8e4db;border-radius:5px;background:#f0f5f0;padding:0 14px}
+.method-result details>summary{padding:12px 0;color:#345b46;font-size:14px;font-weight:500;line-height:1.6;cursor:pointer}
+.method-result details>summary:focus-visible{outline:2px solid #96b8a5;outline-offset:3px}
+.method-result details[open]{padding-bottom:12px}.method-result details article{background:#fff;margin:12px 0}
+.method-result details .explanation,.method-result details .condition-note{font-size:13px;color:#526b5d}
+
+.answer-panel{display:flex;flex-direction:column}.answer-panel .ai-note{margin-top:auto;padding-top:16px;margin-bottom:0}
+.method-result .answer-sources{margin-top:26px}
+.method-result details .notice{margin:0;background:transparent;border:0;padding:4px 0 8px;color:#40574e}
+
+.method-result .answer-sources{padding:18px 0 0;margin:26px 0 20px;border-top:1px solid #cdd8d0}
+.answer-sources .sources-heading{font-size:13px;font-weight:600;line-height:1.5;margin:0 0 16px;color:#60716b;letter-spacing:.04em}
+.answer-sources .source-citation{background:#fff;border:1px solid #dce6df;border-left:3px solid #8ba994;border-radius:4px;padding:16px 18px;margin:0 0 14px}
+.answer-sources .source-citation h4{font-size:16px;line-height:1.5;margin:0 0 6px}
+.answer-sources .source-citation .meta{font-size:13px;line-height:1.6}
+.answer-sources .source-citation blockquote{font-size:15px;font-weight:400;line-height:1.75;margin:14px 0;color:#40574e}
+.answer-sources .source-origin{font-size:12px;line-height:1.6;margin:10px 0 0;color:#60716b}
+.source-empty p{font-size:14px;line-height:1.7;margin:12px 0 0}
+.method-options{margin-top:18px}.method-options details{margin:12px 0}.considered-policy{border-top:1px solid #d8e4db;padding:14px 0}.considered-policy h4{font-size:15px;margin:0 0 8px}.considered-policy p{font-size:14px;line-height:1.7;margin:8px 0}.answer-sources .source-citation{background:transparent;border:0;border-left:2px solid #9ab7a5;border-radius:0;padding:0 0 0 18px;margin:0 0 22px}</style>
+</head>
+<body class="has-results"><main>
+  <header><div class="eyebrow">Company knowledge / Policy assistant</div><div class="banner-title"><svg class="policy-symbol" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M12 5h17l8 8v15M12 5v38h15M29 5v9h8M19 21h11M19 28h7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="35" cy="36" r="10" fill="#e5eee7" stroke="currentColor" stroke-width="2.2"/><path d="m30 36 3.5 3.5L40 33" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><h1>Find the policy you need.</h1></div><p class="muted">Ask a question to find matching company policies and read their original wording.</p></header>
+  <div class="workspace"><aside class="search-side" aria-label="Ask a policy question"><form id="search-form"><label for="run-mode">Run mode</label><select id="run-mode"><option value="all">Compare all three (default)</option><option value="rules">Rules-based search only</option><option value="llm">LLM without a vector index only</option><option value="vector">LLM with a vector index only</option></select><label for="question">Your policy question</label><div class="search"><input id="question" placeholder="How many vacation days do I receive?" required maxlength="1000"><button id="submit" disabled>Compare all three methods</button></div></form>
+  <p class="examples-label">Try an example</p><div class="examples" aria-label="Example questions"><button type="button">How many vacation days do I receive?</button><button type="button">Can I work from another country?</button><button type="button">When do I submit travel receipts?</button></div>
+  </aside><section class="results-side" aria-label="Policy results"><h2 class="results-heading">Method comparison</h2><p id="status" class="status" role="status">Loading policy data…</p><section id="results" aria-label="Search results"><div class="empty-state"><h3>Your policies will appear here.</h3><p>Enter a question or choose an example to get started.</p></div></section></section></div>
+  <details class="testing"><summary>Recorded usage and performance</summary><p>The reviewed 300-question evaluation is reported below, followed by your browser’s separate exploratory usage history. Initial results and retests are kept separate. Completed requests in browser history do not establish answer correctness.</p><div class="table-scroll" id="comparison-history"></div></details><details class="testing"><summary>Prepared questions · rules-based retrieval</summary><p>Check the prepared questions against the rules-based search. Expected policy retrieval is checked automatically. Review answer quality yourself, especially for questions with missing information.</p><button id="run-tests" disabled>Run prepared tests</button><p id="test-status" role="status">Loading test questions…</p><div id="test-results" class="table-scroll" tabindex="0" aria-label="Test results table"></div></details>
+</main><script type="module" src="app.js"></script></body></html>
